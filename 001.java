@@ -1,3 +1,4 @@
+
 /** 
 LINGUAGEM DE PORGRAMAÇÃO:
 conjunto de regras léxas(ortografica, correção de palavras 
@@ -171,9 +172,174 @@ LTS: Long term support
 JVM:
 necessário quando há trocas de sistema operacional
 
+Java é orientado a objetos
+oque significa que java tem classes
 
-Tipagem:
+Pacote(entities): 
+agrupamento lógico de classes relacionadas
 
+Serviços:
+Serviços de email, log, pedidos
 
+Repositorios:
+classes para acessar os dados
+
+Módulo:
+Agrupa pacotes de entities de classes, 
+por exemplo o módulo financeiro:
+agrupa as entidades, serviços e repositórios do finaneciro,
+compondo assim um módulo específico, para fisn de organização
+
+runtime: agrupamento físico que pode ser instalado para rodar em
+dispositivos
+
+API(aplicação): agrupamento de módulos relacionados
+
+-- eclipse 4.11
+
+Tipagem forte:
+rigidamente aplicados e não são implicitamente convertidos 
+de um tipo para outro sem uma declaração explícita
+
+A linguagem faz verificações rigorosas para garantir que as 
+operações sejam realizadas apenas entre tipos compatíveis e
+que não ocorram conversões automáticas entre tipos incompatíveis.
+
+Tipagem fraca:
+os tipos de dados são mais flexíveis e podem ser implicitamente 
+convertidos de um tipo para outro em certas situações
+a linguagem permite operações entre tipos de dados diferentes
+sem exigir conversões explícitas por parte do programador, tendendo
+a ser mais permissivas, mas levando a erros difíceis de detectar
+
+Wokspace:
+.metadata
+RemoteSystemTempFiles
+
+pubic static void main (permite que o porgrama seja executável)
+--> ponto onde o programa começa
+
+system.out.orintIn("olá mundo");
  */
+
+public class Main {
+
+    public static void main(String[] args){
+
+        System.out.printIn("Olá Mundo");
+    }
+
+}
+
+//Estrutura sequencial:
+
+//Estrutura condicional:
+
+//Estrutura repetititvas:
+
+variável fica armazenada na memória RAM:
+possui nome, tipo, valor, endereço de memória
+
+<tipo> <nome> = <valor>;
+int idade = 22;
+double altura = 1.67;
+char sexo = 'F';
+
+tipos primitivos:
+
+1 bit -> 2 possibilidades
+8 bits -> 2^8 = 256 possibilidades
+de 0 a 255 
+
+Tabela unicode table:
+
+1 byte = 8 bits = 0 até 255, porém esses números iniciam 
+negativos, portanto -128 até 127 
+
+1 short = 16 bits = 2^16 = 65536 /2 (metade é negativo)
+ -32768 a 32767
+
+ 1 int = 32 bits = 2^32 = 4.294.967.296 /2 = 2.147.483.648
+ - 2.147.483.648 a 2.147.483.647
+
+ 1 long = 64 bits = 2^64 = 1.8446744e+19 ...
+
+ 1 float = 32 bits = 
+
+ 1 double = 64 bits
+
+ 1 char = 16 bits = '\u0061 = A ou \uFFFF'
+ \u unicode hexadecimal
+ \x hexadecimal
+ \octal
+
+ 1 boolean = 1  bit = {true, false}
+
+ 
+//Bytecode:
+0:   ldc           #2; //String "Olá Mundo"
+2:   invokevirtual #3; //Method java/io/PrintStream.println:(Ljava/lang/String;)V
+5:   return
+
+//Assembly:
+section .data
+    mensagem db "Olá Mundo", 0x0A
+
+section .text
+    global _main
+
+_main:
+    push mensagem
+    call printf
+    add esp, 4
+
+    mov eax, 0
+    ret
+//https://pt.wikipedia.org/wiki/Linguagem_assembly
+
+//Linguagem de máquina:
+68 78 56 34 12   ; push mensagem
+E8 34 12 00 00   ; call printf
+83 C4 04         ; add esp, 4
+
+/* Programação e Variáveis: No processo de programação, 
+você escreve código-fonte em uma linguagem de programação,
+que inclui declaração de variáveis, estruturas de controle,
+funções, entre outros elementos. Essas variáveis e estruturas 
+de dados são armazenadas na memória RAM do computador 
+enquanto o programa está em execução.
+
+Compilação/Interpretação: O código-fonte é então compilado 
+ou interpretado para produzir instruções de máquina específicas 
+para a arquitetura do processador em que o programa será 
+executado. Isso pode incluir a conversão do código-fonte 
+para bytecode em linguagens como Java, ou diretamente 
+para código de máquina binário em linguagens compiladas 
+como C++.
+
+Execução de Instruções: As instruções de máquina geradas pelo
+compilador ou interpretador são carregadas na CPU e executadas 
+sequencialmente. Isso envolve abrir e fechar transistores em 
+circuitos específicos para realizar operações lógicas e 
+aritméticas, manipular dados na memória, transferir dados 
+entre registradores, entre outras tarefas.
+
+Operações na CPU: Dentro da CPU, as operações são realizadas 
+pelos componentes internos, como a Unidade de Controle 
+(Control Unit), que coordena a execução de instruções, e a 
+Unidade de Execução (Execution Unit), que realiza operações 
+aritméticas e lógicas. Os transistores são usados para 
+implementar portas lógicas e outros circuitos necessários 
+para processar as instruções.
+
+Interação com a Memória: Durante a execução do programa, a 
+CPU pode acessar dados na memória RAM para ler variáveis, 
+gravar resultados de cálculos, ou buscar instruções adicionais.
+Isso envolve a abertura e o fechamento de portas de acesso à
+ memória, controlado pela lógica interna da CPU./*
+
+3 operações básicas do computador:
+entrada de dados (programa faz a leitura)
+processamento de dados (CPU - atribuição)
+saída de dados (escrita)
 
