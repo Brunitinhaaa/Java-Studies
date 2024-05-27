@@ -343,3 +343,107 @@ entrada de dados (programa faz a leitura)
 processamento de dados (CPU - atribuição)
 saída de dados (escrita)
 
+*/
+
+//Print do JAVA:
+System.out.date     //sem quebra de linha
+System.out.printIn  //com quebra de linha
+
+//printf (abreviado para F de Formatação)
+
+Casas decimais:
+printf('%.2f%n', variavel);
+
+%: Indica o início de um especificador de 
+conversão.
+
+.2: Indica a precisão da formatação de 
+ponto flutuante, neste caso, dois dígitos 
+após o ponto decimal.
+
+f: Especifica que o valor a ser formatado 
+é um número de ponto flutuante.
+
+%n: Especifica uma nova linha na saída.
+
+
+import java.util.Locale;
+Locale.setDefaut(Locale.US);
+
+cancatenação:
+x + y + 'stringTest'
+
+System.out.printf('Resultado' = %.2f metros%n, x);
+System.out.printf("%s tem %d anos e ganha R$ %.2f reais%n",
+nome, idade, renda);
+
+marcador de variável:
+%d, %f, %s, %n
+
+----------------------------------------------------
+import java.util.Locale;
+
+String product1 = "Computer";
+String product2 = "Office desk";
+
+int age = 30;
+int code = 5290;
+char gender = 'F';
+
+double price1 = 2100.0; //(double põe .0 por boas práticas)
+double price2 = 650.0;
+double price 3 = 53.234567;
+
+System.out.printf("Products;%n %s, witch price is %.2f%n %s, wich price is %.2f%n", product1, price1, product2, price2);
+System.out.printf("Record; %d, years old, code %d, and gender: %d%n", age, code, gender);
+System.out.printf("Measure with eight decimal places: %.8f%n Rounded (three decimal places): %.3f", price3, price3, price3);
+
+Locale.setDefaut(Locale.US);
+System.out.printf("US deciaml point: %.3f", price3);
+
+quando o compilador faz uma expressão com 2 números int,
+o resultado será um int, para que o resultado seja em 
+um tipo diferente deve-se declarar o tipo na expressão:
+
+int a,b;
+double resultado;
+
+a = 5;
+b = 2;
+
+resultado = (double) a/b;
+// esse processo de conversão explícita dos valores é chamada
+// de casting
+System.out.printIn(resultado);
+
+//o castign também pode ser usando quando o compilador acha
+//que algum valor será perdido no resultado
+
+double a;
+int b;
+
+a = 5.0;
+b = a; //isso nao roda, por isso faz o casting:
+
+b = (int) a;
+
+System.Out.printIn(b);
+-------------------------------------------------------
+
+//Particularidade para entrada de dados:
+
+adiciona a biblioteca
+import java.util.scanner;
+
+sc.close() quando não precima mais do objeto sc
+
+Scanner sc = new Scanner(System.in);
+associa o objeto scanner ao teclado console
+
+x = sc.next();
+
+sc --> variável scanner 
+
+
+
+
