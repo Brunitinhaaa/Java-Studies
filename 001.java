@@ -405,7 +405,7 @@ System.out.println  //saída padrão com quebra de linha
 System.out.printf   //permite inserir valores formatados,
                     // como %d, %f e e %s, por exemplo.
 
-//printf (abreviado para F de Formatação)
+
 
 //DIFERENÇAS:
 //Printlf
@@ -533,7 +533,6 @@ public class Main {
 
 LENDO VÁRIOS DADOS NA MESMA LINHA:
 
-
 import java.util.Scanner;
 
 public class Main {
@@ -556,6 +555,34 @@ public class Main {
 
     }
 }
+--------------------------------------------------------------
+        x = sc.next(); //lê a próxima palavra
+        y = sc.nextLine(); //lê a próxima linha
+                           //e limpa o buffer de leitura
 
-------------------------------------------------------
+//Ao usar algum comando de leitura diferente do nextLine()
+//e der alguma quebra de linha, essa quebra de linha
+//fica "pendente" na entrada padrão.
+
+//Então, ao fazer um nextLine(), a quebra de linha pendente 
+//será absorvida pelo nextLine(), para resolver isso,
+//faz um next.line extra
+------------------------------------------------------------
+ATALHOS:
+
+Ctrl shift F //indenta o código automaticamente
+------------------------------------------------------------
+FUNÇÕES:
+
+Math.sqrt(x); 
+// raiz quadrada
+Math.pow(x, y);
+// potenciação
+Math.abs(x, y);
+// valor absoluto
+------------------------------------------------------------
+
+
+
+
 
