@@ -530,3 +530,32 @@ public class Main {
 }
 
 ------------------------------------------------------
+
+LENDO VÁRIOS DADOS NA MESMA LINHA:
+
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) { 
+
+        String x;
+        int y;
+        double z;
+        
+        Scanner sc = new Scanner(System.in); 
+
+        x = sc.next();
+        y = sc.nextInt();
+        z = sc.nextDouble();
+        
+        System.out.println("Dados digitados:");
+        System.out.println(x);
+        System.out.println(y);
+        System.out.println(z);
+
+    }
+}
+
+------------------------------------------------------
+
