@@ -1,7 +1,6 @@
 package exercicios;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 public class ListaNomes {
@@ -12,13 +11,14 @@ public class ListaNomes {
         nomes.add("Ariana");
         nomes.add("Luciana");
         
-        for ( nome : nomes) {
-            if (nome.startsWith("A")) { 
-                nomes.remove(nome);
+        List<String> nomesFiltrados = new ArrayList<>();
+        for (String nome : nomes) {
+            if (!nome.startsWith("A")) { 
+                nomesFiltrados.add(nome);
             }
         }
-        
-        System.out.println(nomes);
+
+        System.out.println(nomesFiltrados);
     }
 }
 
